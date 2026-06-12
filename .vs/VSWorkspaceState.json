@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\hero-ui",
+    "\\hero-ui\\hero-app",
+    "\\hero-ui\\hero-app\\src",
+    "\\hero-ui\\hero-app\\src\\app",
+    "\\hero-ui\\hero-app\\src\\app\\Core",
+    "\\hero-ui\\hero-app\\src\\app\\Features",
+    "\\hero-ui\\hero-app\\src\\app\\Features\\heroes",
+    "\\hero-ui\\hero-app\\src\\app\\Features\\heroes\\pages",
+    "\\hero-ui\\hero-app\\src\\app\\Features\\heroes\\pages\\register"
+  ],
+  "SelectedNode": "\\hero-ui\\hero-app\\src\\app\\app.routes.ts",
+  "PreviewInSolutionExplorer": false
+}

@@ -1,0 +1,17 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\Core",
+    "\\src\\app\\Core\\services",
+    "\\src\\app\\Features",
+    "\\src\\app\\Features\\heroes",
+    "\\src\\app\\Features\\heroes\\pages",
+    "\\src\\app\\Features\\heroes\\pages\\add-hero",
+    "\\src\\app\\Features\\heroes\\pages\\hero-list",
+    "\\src\\assets"
+  ],
+  "SelectedNode": "\\src\\app\\Features\\heroes\\pages\\add-hero\\add-hero.component.css",
+  "PreviewInSolutionExplorer": false
+}

@@ -1,0 +1,30 @@
+<div class="auth-page">
+  <div class="auth-container">
+    <h2>🦸 Update Hero Information</h2>
+
+    <input type="text"
+           name="firstName"
+           placeholder="First Name"
+           [(ngModel)]="hero.firstName">
+
+
+    <input type="text"
+           name="lastName"
+           placeholder="Last Name"
+           [(ngModel)]="hero.lastName">
+
+    <div class="form-group checkbox">
+      <input type="checkbox"
+             name="isActive"
+             [(ngModel)]="hero.isActive">
+      <span>Active</span>
+    </div>
+
+    <button (click)="updateHero()">Save Hero</button>
+
+    <p>
+      <a routerLink="/heroes" class="secondary">Cancel</a>
+    </p>
+
+  </div>
+</div>

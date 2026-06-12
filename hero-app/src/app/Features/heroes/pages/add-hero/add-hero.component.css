@@ -1,0 +1,102 @@
+
+/* FULL PAGE */
+.auth-page {
+  height: 100vh;
+  background: url('../../../../../assets/deadpool.jpg') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-container {
+  max-width: 350px;
+  margin: 80px auto;
+  padding: 25px;
+  backdrop-filter: blur();
+  border-radius: 12px;
+  background: rgba(20, 20, 20, 0.9);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px rgba(237, 29, 36, 0.4);
+  text-align: center;
+  color: white;
+}
+
+/*  CARD */
+.card {
+  max-width: 350px;
+  width: 100%;
+  padding: 25px;
+  border-radius: 12px;
+  background: rgba(20, 20, 20, 0.9);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px rgba(237, 29, 36, 0.4);
+  text-align: center;
+  color: white;
+}
+
+/* TITLE */
+.card-title {
+  color: #ED1D24;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  font-size: 20px;
+}
+
+/* INPUTS */
+input[type="text"] {
+  width: 95%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  border: 1px solid #333;
+  background: #111;
+  color: white;
+  outline: none;
+  transition: 0.2s;
+}
+
+  input[type="text"]:focus {
+    border-color: #ED1D24;
+    box-shadow: 0 0 5px #ED1D24;
+  }
+
+/* CHECKBOX */
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  color: white;
+}
+
+/* BUTTONS */
+button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background: #ED1D24;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+  margin-bottom: 10px;
+}
+
+  button:hover {
+    background: #b31217;
+  }
+
+/* CANCEL LINK */
+.secondary {
+  display: inline-block;
+  margin-top: 5px;
+  color: #ED1D24;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+  .secondary:hover {
+    text-decoration: underline;
+  }

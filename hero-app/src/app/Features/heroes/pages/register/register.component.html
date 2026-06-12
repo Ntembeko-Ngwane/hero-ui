@@ -1,0 +1,33 @@
+<div class="auth-page">
+  <form (ngSubmit)="register()">
+    <div class="auth-container">
+      <h2>Register</h2>
+
+      <!-- ✅ Add name attributes -->
+      <input [(ngModel)]="username"
+             name="username"
+             placeholder="Username"
+             required />
+
+      <input [(ngModel)]="password"
+             name="password"
+             type="password"
+             placeholder="Password"
+             required />
+
+      <!-- ✅ Use submit instead of click -->
+      <button type="submit" [disabled]="isLoading">
+        {{ isLoading ? 'Registering...' : 'Register' }}
+      </button>
+
+      <p>
+        Already have an account?
+        <a routerLink="/login">Login</a>
+      </p>
+
+      <div *ngIf="message" class="message" [ngClass]="isError ? 'error' : 'success'">
+        {{ message }}
+      </div>
+    </div>
+  </form>
+</div>

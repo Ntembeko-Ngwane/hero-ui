@@ -1,0 +1,85 @@
+
+<div class="page-container">
+  <div class="page-header">
+    <h2>🦸 Hero Management System</h2>
+
+    <div class="header-actions">
+
+      <div class=" search-group">
+
+        <div class="search-wrapper">
+
+          <span class="search-icon">🔍</span>
+
+
+          <input #searchInput
+                 type="text"
+                 placeholder="Search hero..."
+                 class="search-input"
+                 (input)="searchHeroes($event.target.value)" />
+
+          <span class="clear-icon"
+                *ngIf="searchInput.value && searchInput.value.length > 0"
+                (click)="searchInput.value=''; searchHeroes('')">
+            ✖
+          </span>
+        </div>
+
+        <!--<button class="primary" (click)="searchHeroes(searchInput.value)">Search</button>-->
+      </div>
+
+      <button class="primary" (click)="goToAdd()">+ Add Hero</button>
+
+      <button class="logout" (click)="logout()">Logout</button>
+
+    </div>
+  </div>
+
+
+  <div class="table-container">
+
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Status</th>
+          <th class="actions">Actions</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let hero of (paginatedHeroes$ | async)">
+          <td>{{ hero.id }}</td>
+          <td>{{ hero.firstName }}</td>
+          <td>{{ hero.lastName }}</td>
+          <td>
+            <span [class.active]="hero.isActive" [class.inactive]="!hero.isActive">
+              {{ hero.isActive ? 'Active' : 'Inactive' }}
+            </span>
+          </td>
+          <td>
+            <button class="edit" (click)="editHero(hero.id)">Edit</button>
+            <button class="delete" *ngIf="isAdmin" (click)="deleteHero(hero.id)">Delete</button>
+
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="pagination">
+    <button (click)="prevPage()" [disabled]="(currentPage$ | async) === 1">
+      ⬅ Prev
+    </button>
+
+    <span>
+      Page {{ currentPage$ | async }} of {{ totalPages$ | async }}
+    </span>
+
+    <<button (click)="nextPage()" [disabled]="(currentPage$ | async) === (totalPages$ | async)">
+      Next ➡
+    </button>
+  </div>
+</div>
